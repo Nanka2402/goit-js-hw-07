@@ -35,3 +35,10 @@ const elem = images.map(createEl).join('');
 
 const gallery = document.querySelector('.gallery');
 gallery.insertAdjacentHTML('beforeend', elem);
+gallery.style.display = 'flex';
+gallery.style.gap = '24px';
+
+const imagesElements = gallery.querySelectorAll('img');
+imagesElements.forEach(img => {
+  img.style.width = '100%';
+});
