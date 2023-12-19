@@ -21,8 +21,9 @@ function createBoxes(amount) {
   formInput.value = '';
 }
 btnCreate.addEventListener('click', () => {
-  if (1 <= formInput.value <= 100) {
-    createBoxes(formInput.value);
+  const value = Number(formInput.value);
+  if (1 <= value && value <= 100) {
+    createBoxes(value);
   }
 });
 btnDestroy.addEventListener('click', destroyEl);
